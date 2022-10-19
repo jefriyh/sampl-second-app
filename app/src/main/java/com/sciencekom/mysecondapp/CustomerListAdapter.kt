@@ -23,11 +23,23 @@ class CustomerListAdapter(var listItem:ArrayList<Customer>) :
         holder.binding.tvCustomerDomisili.text = customerData.domicile
         holder.binding.tvCustomerGender.text = customerData.gender
         holder.binding.ivCustomerImage.setImageResource(customerData.image)
-
+        holder.binding.root.setOnClickListener {
+            onItemClickCallback.onItemClicked(listItem[holder.adapterPosition])
+        }
     }
 
     override fun getItemCount(): Int {
         return  listItem.size
     }
+
+    interface OnItemClickCallback{
+        fun onItemClicked(customer: Customer)
+    }
+
+    private lateinit var onItemClickCallback : OnItemClickCallback
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback
+    }
+
 
 }

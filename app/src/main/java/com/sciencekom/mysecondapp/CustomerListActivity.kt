@@ -1,5 +1,6 @@
 package com.sciencekom.mysecondapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,6 +23,20 @@ class CustomerListActivity : AppCompatActivity() {
 
         val customerListAdapter = CustomerListAdapter(list)
         binding.rvCustomer.adapter = customerListAdapter
+
+        customerListAdapter.setOnItemClickCallback(object:CustomerListAdapter.OnItemClickCallback{
+            override fun onItemClicked(customer: Customer) {
+                val intent = Intent(this@CustomerListActivity,
+                    CustomerDetailActivity::class.java)
+
+                intent.putExtra("CUSTOMER", customer)
+
+                startActivity(intent)
+
+
+            }
+
+        })
 
 
 
