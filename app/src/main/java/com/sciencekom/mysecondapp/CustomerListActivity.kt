@@ -2,6 +2,7 @@ package com.sciencekom.mysecondapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.sciencekom.mysecondapp.databinding.ActivityCustomerListBinding
 
 class CustomerListActivity : AppCompatActivity() {
@@ -13,8 +14,15 @@ class CustomerListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCustomerListBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         list.addAll(listCustomers)
+
+
+        binding.rvCustomer.setHasFixedSize(true)
+        binding.rvCustomer.layoutManager = LinearLayoutManager(this)
+
+        val customerListAdapter = CustomerListAdapter(list)
+        binding.rvCustomer.adapter = customerListAdapter
+
 
 
     }
@@ -29,12 +37,9 @@ class CustomerListActivity : AppCompatActivity() {
 
         for (i in dataName.indices){
             val customer = Customer(dataName[i],dataDomicile[i],
-                dataGender[i], dataImage.getResourceId(i, -1))
+                dataGender[i], dataImage.getResourceId(i, 0))
             listCustomer.add(customer)
         }
-
         return listCustomer
     }
-
-
 }
