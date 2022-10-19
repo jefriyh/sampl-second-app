@@ -1,3 +1,59 @@
 <resources>
     <string name="app_name">MySecondApp</string>
+
+    <string-array name="data_name">
+        <item>Fadlan</item>
+        <item>Arya</item>
+        <item>Abrar</item>
+        <item>Naufal</item>
+        <item>Wildan</item>
+        <item>Ihsan</item>
+        <item>Enjel</item>
+        <item>Aura</item>
+        <item>Faizah</item>
+        <item>Rima</item>
+    </string-array>
+
+    <string-array name="data_domisili">
+        <item>Tangerang</item>
+        <item>Bekasi</item>
+        <item>Depok</item>
+        <item>Bogor</item>
+        <item>Jakarta</item>
+        <item>Surabaya</item>
+        <item>Malang</item>
+        <item>Sumatra</item>
+        <item>Kalimantan</item>
+        <item>Sulawesi</item>
+    </string-array>
+
+    <string-array name="data_gender">
+        <item>Pria</item>
+        <item>Pria</item>
+        <item>Pria</item>
+        <item>Pria</item>
+        <item>Pria</item>
+        <item>Pria</item>
+        <item>Wanita</item>
+        <item>Wanita</item>
+        <item>Wanita</item>
+        <item>Wanita</item>
+    </string-array>
+
+    <integer-array name="data_image">
+        <item>@drawable/data_man_1</item>
+        <item>@drawable/data_man_1</item>
+        <item>@drawable/data_man_1</item>
+        <item>@drawable/data_man_1</item>
+        <item>@drawable/data_man_1</item>
+        <item>@drawable/data_man_1</item>
+        <item>@drawable/data_woman_1</item>
+        <item>@drawable/data_woman_2</item>
+        <item>@drawable/data_woman_1</item>
+        <item>@drawable/data_woman_2</item>
+    </integer-array>
+
+
+
+
 </resources>
