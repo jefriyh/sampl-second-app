@@ -42,18 +42,16 @@
 
     <integer-array name="data_image">
         <item>@drawable/data_man_1</item>
+        <item>@drawable/data_man_2</item>
         <item>@drawable/data_man_1</item>
+        <item>@drawable/data_man_2</item>
         <item>@drawable/data_man_1</item>
-        <item>@drawable/data_man_1</item>
-        <item>@drawable/data_man_1</item>
-        <item>@drawable/data_man_1</item>
+        <item>@drawable/data_man_2</item>
         <item>@drawable/data_woman_1</item>
         <item>@drawable/data_woman_2</item>
         <item>@drawable/data_woman_1</item>
         <item>@drawable/data_woman_2</item>
     </integer-array>
-
-
 
 
 </resources>
