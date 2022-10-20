@@ -1,10 +1,11 @@
-package com.sciencekom.mysecondapp
+package com.sciencekom.mysecondapp.ui.customer
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.sciencekom.mysecondapp.R
 import com.sciencekom.mysecondapp.databinding.ActivityCustomerListBinding
 
 class CustomerListActivity : AppCompatActivity() {
@@ -25,7 +26,7 @@ class CustomerListActivity : AppCompatActivity() {
         val customerListAdapter = CustomerListAdapter(list)
         binding.rvCustomer.adapter = customerListAdapter
 
-        customerListAdapter.setOnItemClickCallback(object:CustomerListAdapter.OnItemClickCallback{
+        customerListAdapter.setOnItemClickCallback(object: CustomerListAdapter.OnItemClickCallback {
             override fun onItemClicked(customer: Customer) {
                 val intent = Intent(this@CustomerListActivity,
                     CustomerDetailActivity::class.java)

@@ -15,12 +15,12 @@
         android:weightSum="10">
 
         <ImageView
-            android:id="@+id/ivCustomerImage"
+            android:id="@+id/ivInventoryImage"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:scaleType="centerCrop"
-            android:src="@drawable/data_man_1" />
+            android:src="@drawable/ic_inventory" />
 
         <LinearLayout
             android:padding="10dp"
@@ -30,7 +30,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvCustomerName"
+                android:id="@+id/tvInventoryName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nama"
@@ -38,17 +38,17 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvCustomerGender"
+                android:id="@+id/tvInventoryCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pria"
+                android:text="Sepatu"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/tvCustomerDomisili"
+                android:id="@+id/tvInventoryPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jakarta"
+                android:text="IDR 5000"
                 android:textSize="20sp" />
 
         </LinearLayout>

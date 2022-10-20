@@ -1,4 +1,4 @@
-package com.sciencekom.mysecondapp
+package com.sciencekom.mysecondapp.ui.customer
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

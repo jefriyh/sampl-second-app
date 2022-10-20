@@ -1,10 +1,11 @@
-package com.sciencekom.mysecondapp
+package com.sciencekom.mysecondapp.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.sciencekom.mysecondapp.databinding.ActivityMainBinding
 import com.sciencekom.mysecondapp.helper.PrefHelper
+import com.sciencekom.mysecondapp.ui.customer.CustomerListActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding:ActivityMainBinding

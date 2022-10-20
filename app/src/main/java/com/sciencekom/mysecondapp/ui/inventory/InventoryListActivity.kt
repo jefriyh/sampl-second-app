@@ -1,7 +1,8 @@
-package com.sciencekom.mysecondapp
+package com.sciencekom.mysecondapp.ui.inventory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.sciencekom.mysecondapp.R
 
 class InventoryListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

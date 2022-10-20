@@ -1,4 +1,4 @@
-package com.sciencekom.mysecondapp
+package com.sciencekom.mysecondapp.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

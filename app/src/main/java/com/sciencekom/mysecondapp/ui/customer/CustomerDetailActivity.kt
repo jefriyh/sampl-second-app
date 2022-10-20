@@ -1,4 +1,4 @@
-package com.sciencekom.mysecondapp
+package com.sciencekom.mysecondapp.ui.customer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

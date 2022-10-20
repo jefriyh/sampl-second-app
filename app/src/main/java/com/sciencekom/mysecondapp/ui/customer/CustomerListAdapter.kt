@@ -1,4 +1,4 @@
-package com.sciencekom.mysecondapp
+package com.sciencekom.mysecondapp.ui.customer
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
