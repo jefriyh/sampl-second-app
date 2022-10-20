@@ -26,6 +26,8 @@ class InventoryListActivity : AppCompatActivity() {
 
         getData()
 
+
+
     }
 
     fun getData(){
