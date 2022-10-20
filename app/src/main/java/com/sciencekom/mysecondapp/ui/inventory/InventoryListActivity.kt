@@ -38,10 +38,11 @@ class InventoryListActivity : AppCompatActivity() {
                 if(response.isSuccessful){
                     if(response.body()!=null){
                         Log.d("Testing body", "onResponse: ${response.body()?.data}")
-                        inventoryAdapter = InventoryListAdapter(response.body()!!.data)
+                        inventoryAdapter= InventoryListAdapter(response.body()!!.data)
                         binding.rvInventory.setHasFixedSize(true)
                         binding.rvInventory.layoutManager = LinearLayoutManager(this@InventoryListActivity)
-                        binding.rvInventory.adapter = inventoryAdapter
+                        binding.rvInventory.adapter =inventoryAdapter
+
 
                     }
                 } else {

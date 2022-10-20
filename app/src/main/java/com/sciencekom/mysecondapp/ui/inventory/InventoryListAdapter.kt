@@ -30,7 +30,7 @@ class InventoryListAdapter(var listItem:List<DataItem>) :
 
 
         Glide.with(holder.binding.root)
-            .load("https://indi.tech/wp-content/uploads/2019/05/unnamed-Copy-2-1-1.png")
+            .load(inventoryData.image)
             .centerCrop()
             .into(holder.binding.ivInventoryImage)
 
