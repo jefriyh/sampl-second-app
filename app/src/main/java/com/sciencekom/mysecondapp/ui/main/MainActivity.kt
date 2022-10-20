@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.sciencekom.mysecondapp.databinding.ActivityMainBinding
 import com.sciencekom.mysecondapp.helper.PrefHelper
 import com.sciencekom.mysecondapp.ui.customer.CustomerListActivity
+import com.sciencekom.mysecondapp.ui.inventory.InventoryListActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding:ActivityMainBinding
@@ -25,6 +26,11 @@ class MainActivity : AppCompatActivity() {
         }
         binding.bCustomerMenu.setOnClickListener {
             val intent = Intent(this, CustomerListActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.bInventoryMenu.setOnClickListener{
+            val intent = Intent(this, InventoryListActivity::class.java)
             startActivity(intent)
         }
     }
