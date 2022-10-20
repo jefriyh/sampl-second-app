@@ -22,7 +22,7 @@
             android:name=".ui.inventory.InventoryAddActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.LoginActivity"
+            android:name=".ui.inventory.InventoryListActivity"
             android:exported="false" />
         <activity
             android:name=".ui.customer.CustomerDetailActivity"
@@ -34,7 +34,7 @@
             android:name=".ui.main.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.inventory.InventoryListActivity"
+            android:name=".ui.main.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

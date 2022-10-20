@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MySecondApp</string>
+    <string name="app_name">Aplikasi Data Inventory</string>
 
     <string-array name="data_name">
         <item>Fadlan</item>
