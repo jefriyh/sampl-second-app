@@ -4,12 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+
 import com.sciencekom.mysecondapp.DataItem
 import com.sciencekom.mysecondapp.InventoryResponse
 import com.sciencekom.mysecondapp.databinding.ItemCustomerBinding
 import com.sciencekom.mysecondapp.databinding.ItemInventoryBinding
 
-class InventoryListAdapter(var listItem:ArrayList<DataItem>) :
+class InventoryListAdapter(var listItem:List<DataItem>) :
     RecyclerView.Adapter<InventoryListAdapter.ViewHolder>() {
 
     class ViewHolder(var binding: ItemInventoryBinding): RecyclerView.ViewHolder(binding.root)
@@ -29,7 +30,7 @@ class InventoryListAdapter(var listItem:ArrayList<DataItem>) :
 
 
         Glide.with(holder.binding.root)
-            .load(inventoryData.image)
+            .load("https://indi.tech/wp-content/uploads/2019/05/unnamed-Copy-2-1-1.png")
             .centerCrop()
             .into(holder.binding.ivInventoryImage)
 

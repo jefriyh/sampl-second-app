@@ -6,7 +6,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ApiConfig {
+object ApiConfig {
     private val loggingInterceptor = if(BuildConfig.DEBUG){
         HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
     }else{
@@ -17,7 +17,7 @@ class ApiConfig {
         .addInterceptor(loggingInterceptor)
         .build()
 
-    private val retrofit = Retrofit.Builder()
+   var retrofit = Retrofit.Builder()
         .baseUrl("https://mabesal.indi.network/api/")
         .addConverterFactory(GsonConverterFactory.create())
         .client(client)
