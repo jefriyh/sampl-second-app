@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
+        binding.bCustomerMenu.setOnClickListener {
+            val intent = Intent(this, CustomerListActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

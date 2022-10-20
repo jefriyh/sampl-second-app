@@ -3,6 +3,7 @@ package com.sciencekom.mysecondapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sciencekom.mysecondapp.databinding.ActivityCustomerListBinding
 
@@ -28,6 +29,8 @@ class CustomerListActivity : AppCompatActivity() {
             override fun onItemClicked(customer: Customer) {
                 val intent = Intent(this@CustomerListActivity,
                     CustomerDetailActivity::class.java)
+
+                Toast.makeText(this@CustomerListActivity, customer.name, Toast.LENGTH_SHORT).show()
 
                 intent.putExtra("CUSTOMER", customer)
 
