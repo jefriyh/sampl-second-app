@@ -1,5 +1,6 @@
 package com.sciencekom.mysecondapp.ui.inventory
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -26,8 +27,15 @@ class InventoryListActivity : AppCompatActivity() {
 
         getData()
 
+        binding.fabAddInventory.setOnClickListener{
+            var intent = Intent(this, InventoryAddActivity::class.java)
+            startActivity(intent)
+        }
+    }
 
-
+    override fun onRestart() {
+        super.onRestart()
+        getData()
     }
 
     fun getData(){
