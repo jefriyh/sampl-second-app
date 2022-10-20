@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sciencekom.mysecondapp.DataItem
 import com.sciencekom.mysecondapp.InventoryResponse
@@ -39,12 +40,14 @@ class InventoryListActivity : AppCompatActivity() {
     }
 
     fun getData(){
+        binding.pbLoading.visibility = View.VISIBLE
         val  client = ApiConfig.retrofit.create(ItemService::class.java).getItems()
         client.enqueue(object : Callback<InventoryResponse>{
             override fun onResponse(
                 call: Call<InventoryResponse>,
                 response: Response<InventoryResponse>
             ) {
+                binding.pbLoading.visibility = View.GONE
                 if(response.isSuccessful){
                     if(response.body()!=null){
                         Log.d("Testing body", "onResponse: ${response.body()?.data}")
@@ -52,6 +55,16 @@ class InventoryListActivity : AppCompatActivity() {
                         binding.rvInventory.setHasFixedSize(true)
                         binding.rvInventory.layoutManager = LinearLayoutManager(this@InventoryListActivity)
                         binding.rvInventory.adapter =inventoryAdapter
+
+                        inventoryAdapter.setOnItemClickCallback(object :InventoryListAdapter.OnItemClickCallback{
+                            override fun onItemClicked(inventory: DataItem) {
+                                val intent = Intent(this@InventoryListActivity,
+                                    InventoryDetailActivity::class.java)
+                                intent.putExtra("INVENTORY", inventory)
+                                startActivity(intent)
+                            }
+
+                        })
 
 
                     }
@@ -62,6 +75,7 @@ class InventoryListActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<InventoryResponse>, t: Throwable) {
                 Log.e("FAIL", t.message.toString())
+                binding.pbLoading.visibility = View.GONE
             }
 
         })
